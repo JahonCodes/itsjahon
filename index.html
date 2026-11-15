@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>itsjahon</title>
+<meta name="description" content="Jahon Amirkulov: platform engineer moving into ML infrastructure, building Hozir and RentalInsights.">
+</head>
+<body>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;display=swap">
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;background:#111213}
+a{color:#EDEDEA;text-decoration-color:#5C5E62;text-underline-offset:4px;text-decoration-thickness:1px}
+a:hover{color:#F2A541;text-decoration-color:#F2A541}
+.nav-link{color:#B4B5B0;text-decoration:none}
+.nav-link:hover{color:#EDEDEA}
+.row-link{text-decoration:none;color:#EDEDEA}
+.row-link:hover{background:#18191B}
+.row-link:hover .row-title{color:#F2A541}
+input::placeholder{color:#7C7E82}
+input:focus{outline:2px solid #F2A541;outline-offset:2px}
+@media (max-width:720px){
+  .wrap{padding-left:20px !important;padding-right:20px !important}
+  .hero{padding-top:56px !important;padding-bottom:56px !important}
+  .hero-h{font-size:38px !important;line-height:1.12 !important;letter-spacing:-0.03em !important}
+  .hero-sub{font-size:17px !important;margin-top:24px !important}
+  .nav-list{gap:0 20px !important}
+  .section-pad{padding-top:64px !important;padding-bottom:64px !important}
+  .stack-sm{flex-direction:column !important;align-items:stretch !important}
+  .stack-sm input,.stack-sm button{flex:0 0 auto !important;width:100% !important}
+  .now-box{padding:20px !important}
+  .news-box{padding:28px 20px !important;border-radius:12px !important}
+  .about-text{font-size:17px !important}
+  .row-date{flex-basis:auto !important}
+}
+</style>
+
+<div style="font-family: Geist, system-ui, sans-serif; color: #EDEDEA; background: #111213; min-height: 100vh">
+
+  <!-- Header -->
+  <header class="wrap" style="max-width: 1040px; margin: 0 auto; padding: 28px 48px; display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between">
+    <a href="#top" class="nav-link" style="display: inline-flex; align-items: center; gap: 2px; min-height: 44px; font-family: 'Geist Mono', monospace; font-size: 16px; font-weight: 500; color: #EDEDEA">
+      <span style="color: #F2A541">~/</span><span>itsjahon</span>
+    </a>
+    <nav aria-label="Primary">
+      <ul class="nav-list" style="list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4px 28px; font-size: 15px">
+        <li><a class="nav-link" href="#writing" style="display: inline-block; padding: 12px 0">Writing</a></li>
+        <li><a class="nav-link" href="#projects" style="display: inline-block; padding: 12px 0">Projects</a></li>
+        <li><a class="nav-link" href="#newsletter" style="display: inline-block; padding: 12px 0">Newsletter</a></li>
+        <li><a class="nav-link" href="#about" style="display: inline-block; padding: 12px 0">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="top" class="wrap hero" style="max-width: 1040px; margin: 0 auto; padding: 112px 48px 96px">
+    <p style="margin: 0 0 28px; display: inline-flex; align-items: center; gap: 10px; font-family: 'Geist Mono', monospace; font-size: 13px; color: #B4B5B0">
+      <span style="width: 8px; height: 8px; border-radius: 50%; background: #F2A541"></span>
+      Building in public from Morgan Hill, CA
+    </p>
+    <h1 class="hero-h" style="margin: 0; max-width: 820px; font-weight: 600; font-size: 60px; line-height: 1.08; letter-spacing: -0.035em">Hi, I’m Jahon. I build infrastructure by day, products by night, and write about both.</h1>
+    <p class="hero-sub" style="margin: 32px 0 0; max-width: 620px; font-size: 19px; line-height: 1.65; color: #B4B5B0">I’m a platform engineer moving deeper into ML infrastructure. Here I share what I’m learning, how I’m building Hozir and RentalInsights, and the mistakes along the way.</p>
+
+    <form style="margin-top: 44px; max-width: 520px; display: flex; flex-direction: column; gap: 10px">
+      <label for="hero-email" style="font-family: 'Geist Mono', monospace; font-size: 13px; color: #B4B5B0">Get new posts by email. Roughly twice a month.</label>
+      <div class="stack-sm" style="display: flex; flex-wrap: wrap; gap: 10px">
+        <input id="hero-email" type="email" placeholder="you@example.com" style="flex: 1 1 240px; min-height: 48px; box-sizing: border-box; padding: 0 16px; background: #18191B; border: 1px solid #2E3033; border-radius: 8px; color: #EDEDEA; font: inherit; font-size: 16px">
+        <button type="submit" style="min-height: 48px; padding: 0 22px; background: #F2A541; color: #111213; border: 0; border-radius: 8px; font: inherit; font-size: 15px; font-weight: 600; cursor: pointer">Subscribe</button>
+      </div>
+    </form>
+  </section>
+
+  <!-- Now -->
+  <section class="wrap" style="max-width: 1040px; margin: 0 auto; padding: 0 48px 96px">
+    <div class="now-box" style="border: 1px solid #2E3033; border-radius: 12px; padding: 28px 32px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 24px 40px">
+      <div style="display: flex; flex-direction: column; gap: 6px">
+        <span style="font-family: 'Geist Mono', monospace; font-size: 12px; color: #8E9094; letter-spacing: 0.06em; text-transform: uppercase">Now building</span>
+        <span style="font-size: 16px; line-height: 1.5">Hozir, an AI focus assistant for iPhone</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 6px">
+        <span style="font-family: 'Geist Mono', monospace; font-size: 12px; color: #8E9094; letter-spacing: 0.06em; text-transform: uppercase">Now testing</span>
+        <span style="font-size: 16px; line-height: 1.5">Whether investors will pay for out-of-state market reports</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 6px">
+        <span style="font-family: 'Geist Mono', monospace; font-size: 12px; color: #8E9094; letter-spacing: 0.06em; text-transform: uppercase">Now learning</span>
+        <span style="font-size: 16px; line-height: 1.5">ML infrastructure, from the platform side</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Writing -->
+  <section id="writing" style="border-top: 1px solid #222326">
+    <div class="wrap section-pad" style="max-width: 1040px; margin: 0 auto; padding: 96px 48px">
+      <div style="display: flex; flex-wrap: wrap; gap: 16px; align-items: baseline; justify-content: space-between; margin-bottom: 40px">
+        <h2 style="margin: 0; font-weight: 600; font-size: 32px; letter-spacing: -0.02em">Writing</h2>
+        <a href="#" style="display: inline-flex; align-items: center; min-height: 44px; font-size: 15px">All posts →</a>
+      </div>
+
+      <ul style="list-style: none; margin: 0; padding: 0; border-top: 1px solid #222326">
+        <li style="border-bottom: 1px solid #222326">
+          <a href="#" class="row-link" style="display: flex; flex-wrap: wrap; gap: 8px 32px; align-items: baseline; padding: 22px 12px; margin: 0 -12px; border-radius: 8px">
+            <span class="row-date" style="flex: 0 0 120px; font-family: 'Geist Mono', monospace; font-size: 13px; color: #8E9094">[DATE]</span>
+            <span class="row-title" style="flex: 1 1 360px; font-size: 18px; font-weight: 500">[Post title: what an infra engineer gets wrong about ML infrastructure]</span>
+            <span style="font-family: 'Geist Mono', monospace; font-size: 12px; color: #B4B5B0; border: 1px solid #2E3033; border-radius: 999px; padding: 4px 10px">ML infra</span>
+          </a>
+        </li>
+        <li style="border-bottom: 1px solid #222326">
+          <a href="#" class="row-link" style="display: flex; flex-wrap: wrap; gap: 8px 32px; align-items: baseline; padding: 22px 12px; margin: 0 -12px; border-radius: 8px">
+            <span class="row-date" style="flex: 0 0 120px; font-family: 'Geist Mono', monospace; font-size: 13px; color: #8E9094">[DATE]</span>
+            <span class="row-title" style="flex: 1 1 360px; font-size: 18px; font-weight: 500">[Post title: rebuilding my app in Expo, and why it’s now called Hozir]</span>
+            <span style="font-family: 'Geist Mono', monospace; font-size: 12px; color: #B4B5B0; border: 1px solid #2E3033; border-radius: 999px; padding: 4px 10px">Building Hozir</span>
+          </a>
+        </li>
+        <li style="border-bottom: 1px solid #222326">
+          <a href="#" class="row-link" style="display: flex; flex-wrap: wrap; gap: 8px 32px; align-items: baseline; padding: 22px 12px; margin: 0 -12px; border-radius: 8px">
+            <span class="row-date" style="flex: 0 0 120px; font-family: 'Geist Mono', monospace; font-size: 13px; color: #8E9094">[DATE]</span>
+            <span class="row-title" style="flex: 1 1 360px; font-size: 18px; font-weight: 500">[Post title: testing a real estate product with paid ads before writing more code]</span>
+            <span style="font-family: 'Geist Mono', monospace; font-size: 12px; color: #B4B5B0; border: 1px solid #2E3033; border-radius: 999px; padding: 4px 10px">Real estate data</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" style="border-top: 1px solid #222326">
+    <div class="wrap section-pad" style="max-width: 1040px; margin: 0 auto; padding: 96px 48px">
+      <h2 style="margin: 0 0 40px; font-weight: 600; font-size: 32px; letter-spacing: -0.02em">Projects</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 20px">
+
+        <article style="background: #18191B; border: 1px solid #2E3033; border-radius: 12px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
+          <span style="font-family: 'Geist Mono', monospace; font-size: 12px; color: #8E9094">iOS app</span>
+          <h3 style="margin: 0; font-size: 24px; font-weight: 600; letter-spacing: -0.015em">Hozir</h3>
+          <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #B4B5B0">Uzbek for “now.” An assistant that helps you decide the next most important thing and do it. Built for myself first.</p>
+          <a href="#" style="margin-top: auto; display: inline-flex; align-items: center; min-height: 44px; font-size: 15px; font-weight: 500">App Store →</a>
+        </article>
+
+        <article style="background: #18191B; border: 1px solid #2E3033; border-radius: 12px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
+          <span style="font-family: 'Geist Mono', monospace; font-size: 12px; color: #8E9094">Web app</span>
+          <h3 style="margin: 0; font-size: 24px; font-weight: 600; letter-spacing: -0.015em">RentalInsights</h3>
+          <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #B4B5B0">Helps people in expensive cities buy rentals in affordable markets: market finder, rental heatmap, cash flow calculator.</p>
+          <a href="https://rentalinsights.ai" style="margin-top: auto; display: inline-flex; align-items: center; min-height: 44px; font-size: 15px; font-weight: 500">rentalinsights.ai →</a>
+        </article>
+
+        <article style="border: 1px dashed #3A3C40; border-radius: 12px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
+          <span style="font-family: 'Geist Mono', monospace; font-size: 12px; color: #8E9094">Company</span>
+          <h3 style="margin: 0; font-size: 24px; font-weight: 600; letter-spacing: -0.015em">Ustahona</h3>
+          <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #B4B5B0">The small software workshop my products ship under. <em>Ustaxona</em> is Uzbek for a craftsman’s workshop.</p>
+          <a href="#" style="margin-top: auto; display: inline-flex; align-items: center; min-height: 44px; font-size: 15px; font-weight: 500">ustahona →</a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" style="border-top: 1px solid #222326">
+    <div class="wrap section-pad" style="max-width: 1040px; margin: 0 auto; padding: 96px 48px; display: flex; flex-wrap: wrap; gap: 40px 80px">
+      <div style="flex: 1 1 220px; display: flex; flex-direction: column; gap: 20px">
+        <h2 style="margin: 0; font-weight: 600; font-size: 32px; letter-spacing: -0.02em">About</h2>
+        <div role="img" aria-label="Photo of Jahon (placeholder)" style="width: 160px; height: 160px; border-radius: 12px; background: #18191B; border: 1px solid #2E3033; display: flex; align-items: center; justify-content: center; font-family: 'Geist Mono', monospace; font-size: 12px; color: #8E9094">[YOUR PHOTO]</div>
+      </div>
+      <div class="about-text" style="flex: 2 1 460px; min-width: 0; display: flex; flex-direction: column; gap: 18px; font-size: 18px; line-height: 1.7; color: #C9CAC5">
+        <p style="margin: 0">I grew up in Uzbekistan, studied computer science at RIT, and now work as a software engineer in infrastructure and platform engineering in the Bay Area.</p>
+        <p style="margin: 0">Most of my days go to Kubernetes, Terraform, AWS and data pipelines. Lately that work has been moving toward ML infrastructure, and I’m learning it in the open, from the point of view of an engineer who is new to ML.</p>
+        <p style="margin: 0">Outside work I build products that solve my own problems. When I’m not at a keyboard, I’m usually lifting or riding my motorcycle.</p>
+        <p style="margin: 0">Want to say hi? Email me at <a href="mailto:hello@itsjahon.com">hello@itsjahon.com</a>. I read everything.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section id="newsletter" class="wrap" style="max-width: 1040px; margin: 0 auto; padding: 0 48px 96px">
+    <div class="news-box" style="background: #18191B; border: 1px solid #2E3033; border-radius: 16px; padding: 48px; display: flex; flex-wrap: wrap; gap: 32px 56px; align-items: center; justify-content: space-between">
+      <div style="flex: 1 1 340px; display: flex; flex-direction: column; gap: 12px">
+        <h2 style="margin: 0; font-weight: 600; font-size: 30px; letter-spacing: -0.02em">The build log</h2>
+        <p style="margin: 0; font-size: 17px; line-height: 1.6; color: #B4B5B0">What I shipped, what broke and what I learned, sent when there’s something worth reading. No spam, unsubscribe anytime.</p>
+      </div>
+      <form style="flex: 1 1 340px; display: flex; flex-direction: column; gap: 10px">
+        <label for="footer-email" style="font-family: 'Geist Mono', monospace; font-size: 13px; color: #B4B5B0">Email address</label>
+        <div class="stack-sm" style="display: flex; flex-wrap: wrap; gap: 10px">
+          <input id="footer-email" type="email" placeholder="you@example.com" style="flex: 1 1 200px; min-height: 48px; box-sizing: border-box; padding: 0 16px; background: #111213; border: 1px solid #2E3033; border-radius: 8px; color: #EDEDEA; font: inherit; font-size: 16px">
+          <button type="submit" style="min-height: 48px; padding: 0 22px; background: #F2A541; color: #111213; border: 0; border-radius: 8px; font: inherit; font-size: 15px; font-weight: 600; cursor: pointer">Subscribe</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="border-top: 1px solid #222326">
+    <div class="wrap" style="max-width: 1040px; margin: 0 auto; padding: 32px 48px 48px; display: flex; flex-wrap: wrap; gap: 16px 32px; align-items: center; justify-content: space-between; font-size: 14px; color: #8E9094">
+      <span style="font-family: 'Geist Mono', monospace">© 2026 Jahon Amirkulov</span>
+      <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4px 24px">
+        <li><a href="mailto:hello@itsjahon.com" style="display: inline-block; padding: 12px 0; color: #EDEDEA">hello@itsjahon.com</a></li>
+        <li><a class="nav-link" href="#" style="display: inline-block; padding: 12px 0">YouTube</a></li>
+        <li><a class="nav-link" href="#" style="display: inline-block; padding: 12px 0">LinkedIn</a></li>
+        <li><a class="nav-link" href="#" style="display: inline-block; padding: 12px 0">GitHub</a></li>
+        <li><a class="nav-link" href="#" style="display: inline-block; padding: 12px 0">RSS</a></li>
+      </ul>
+    </div>
+  </footer>
+
+</div>
+<script>document.querySelectorAll("form").forEach(function(f){f.addEventListener("submit",function(e){e.preventDefault();});});</script>
+</body>
+</html>
